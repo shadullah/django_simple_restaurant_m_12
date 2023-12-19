@@ -1,0 +1,51 @@
+{% load static tailwind_tags %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% tailwind_css %}
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conic Pizza Hut</title>
+  </head>
+  <body>
+    <nav class="p-5 bg-gray-200 md:flex md:items-center justify-between px-12">
+      <div class="flex justify-between items-center">
+        <span class="text-2xl">
+          <img class="h-10 inline" src="https://img.freepik.com/free-photo/slice-fresh-pizza-with-pepperoni-white_144627-24389.jpg?w=826&t=st=1703012006~exp=1703012606~hmac=f4b57bc061bf61e6528d5c39779bf9496d47b3c37a3206049138c1bcebbb8e40" alt="#">
+          Conic Pizza Hut
+        </span>
+
+        <span class="md:hidden block cursor-pointer">
+          <svg onclick="Menu(this)" xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 448 512"><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
+        </span>
+      </div>
+      <div class="">
+        <ul class="md:flex md:items-center text-xl md:static absolute w-full md:w-auto left-0 py-6 md:py-0 pl-7 md:pl-0  opacity-0 md:opacity-100 transition-all ease-in duration-500">
+          <li class="mx-4 my-6 md:my-0">
+            <a href="#">Home</a>
+          </li>
+          <li class="mx-4 my-6 md:my-0">
+            <a href="#">About</a>
+          </li>
+          <li class="mx-4 my-6 md:my-0">
+            <a href="#">Show Items</a>
+          </li>
+          <li class="mx-4 my-6 md:my-0">
+            <a href="#">Menu</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    
+
+    {% block content %} {% endblock %}
+    <script>
+      function Menu(e){
+      let list = document.querySelector('ul');
+      e.name === 'menu' ? (e.name = "close",list.classList.add('top-[80px]') , list.classList.add('opacity-100')) :( e.name = "menu" ,list.classList.remove('top-[80px]'),list.classList.remove('opacity-100'))
+    }
+    </script>
+  </body>
+</html>
