@@ -1,19 +1,21 @@
-{% extends 'base.html' %}
-<!-- {% load static tailwind_tags %} -->
+{% extends 'base.html' %} {% comment %} {% endcomment %} {% block content %}
 
-<body>
-    {% block content %}
-    
-    <div class="flex items-center">
-        <div class="w-1/2 p-12  text-center">
-            <h1 class="text-3xl text-yellow-600 font-bold py-5">Welcome To Conic Pizza Hut</h1>
-            <p class="text-xl font-normal">Pizza, a global delight, merges the magic of a crisp crust, zesty tomato sauce, and gooey cheese. From classic Margheritas to inventive toppings, it's a culinary journey that unites taste buds worldwide. A round sensation, pizza transcends cultures, turning each bite into a savory celebration of shared happiness.</p>
-        </div>
-        <div class="w-1/2 p-12">
-            <img class=" rounded-lg" src="https://hips.hearstapps.com/hmg-prod/images/classic-cheese-pizza-recipe-2-64429a0cb408b.jpg?crop=0.6666666666666667xw:1xh;center,top&resize=1200:*" alt="#">
-        </div>
-    </div>
+<div class="flex items-center">
+  <div class="w-1/2 p-12 text-center">
+    <h1 class="text-3xl text-yellow-600 font-bold py-5">
+      Welcome To Conic Pizza Hut
+    </h1>
+    <p class="text-xl font-normal">
+      Pizza, a global delight, merges the magic of a crisp crust, zesty tomato
+      sauce, and gooey cheese. From classic Margheritas to inventive toppings,
+      it's a culinary journey that unites taste buds worldwide. A round
+      sensation, pizza transcends cultures, turning each bite into a savory
+      celebration of shared happiness.
+    </p>
+  </div>
+  <div class="w-1/2 p-12">
+    <img class="rounded-lg" src="static/banner_pizza.jpg" alt="#" />
+  </div>
+</div>
 
-    {% endblock %}
-</body>
-</html>
+{% endblock %}

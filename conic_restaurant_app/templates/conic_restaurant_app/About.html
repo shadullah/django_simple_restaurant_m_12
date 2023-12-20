@@ -1,0 +1,37 @@
+{% extends 'base.html' %} 
+
+{% load static %}
+
+{% block content %}
+
+<h1
+  class="text-5xl mx-auto text-yellow-700 p-2 text-center font-semibold border-b-2 border-yellow-400 my-12 w-1/4"
+>
+  About Us
+</h1>
+<p class="text-2xl font-medium text-yellow-600 text-center mx-32">Welcome to Conic Pizza Hut. <br> where passion for pizza meets culinary excellence! At Conic Pizza Hut, <br> we take pride in crafting the perfect pizza experience for our valued customers.</p>
+
+<div>
+    <div class="flex items-center">
+        <div class="w-1/2 p-24">
+            <h3 class="text-2xl text-center my-12">Quality Ingredients, Exceptional Taste</h3>
+            <p class="text-center">Every pizza at Conic Pizza Hut is a masterpiece, carefully curated with top-quality ingredients. Our succulent beef, tender chicken, and flavorful lamb are sourced with precision to ensure every bite is a celebration of taste and texture.</p>
+        </div>
+        <div class="w-1/2 mx-auto">
+            <img class="max-w-[400px] mx-auto rounded-lg" src="{% static 'img/sliced_chessy.webp' %}" alt="#">
+        </div>
+    </div>
+    <div class="flex items-center">
+        <div class="w-1/2 mx-auto">
+            <img class="max-w-[600px] mx-auto rounded-lg" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdm8FgpGYuecjRp4wLv9Vz2H5O7yMl5IAXWg&usqp=CAU" alt="#">
+        </div>
+        <div class="w-1/2 p-24">
+            <h3 class="text-2xl text-center my-12">Diverse Pizza Selection </h3>
+            <p class="text-center">Explore our diverse menu featuring an exciting array of pizzas. From classic favorites to unique creations, there's a pizza for every palate. Whether you're a fan of the robust richness of beef, the savory goodness of chicken, or the exquisite tenderness of lamb, our pizzas are a symphony of flavors that will leave you craving for more.</p>
+        </div>
+        
+    </div>
+    <div></div>
+</div>
+
+{% endblock %}

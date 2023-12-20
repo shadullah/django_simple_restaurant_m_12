@@ -12,40 +12,67 @@
   <body>
     <nav class="p-5 bg-amber-300 md:flex md:items-center justify-between px-12">
       <div class="flex justify-between items-center">
-        <span class="text-2xl text-yellow-800 font-extrabold">
-          <img style="mix-blend-mode: multiply;" class="h-6 inline" src="https://img.freepik.com/free-photo/slice-fresh-pizza-with-pepperoni-white_144627-24389.jpg?w=826&t=st=1703012006~exp=1703012606~hmac=f4b57bc061bf61e6528d5c39779bf9496d47b3c37a3206049138c1bcebbb8e40" alt="#">
-          Conic Pizza Hut
-        </span>
+        <a href="{% url 'home' %}"
+          ><span class="text-2xl text-yellow-800 font-extrabold">
+            <img
+              style="mix-blend-mode: multiply"
+              class="h-6 inline"
+              src="https://img.freepik.com/free-photo/slice-fresh-pizza-with-pepperoni-white_144627-24389.jpg?w=826&t=st=1703012006~exp=1703012606~hmac=f4b57bc061bf61e6528d5c39779bf9496d47b3c37a3206049138c1bcebbb8e40"
+              alt="#"
+            />
+            Conic Pizza Hut
+          </span></a
+        >
 
         <span class="md:hidden block cursor-pointer">
-          <svg onclick="Menu(this)" xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 448 512"><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
+          <svg
+            onclick="Menu(this)"
+            xmlns="http://www.w3.org/2000/svg"
+            height="20"
+            width="20"
+            viewBox="0 0 448 512"
+          >
+            <path
+              d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"
+            />
+          </svg>
         </span>
       </div>
       <div class="">
-        <ul class="md:flex md:items-center text-xl md:static absolute w-full md:w-auto left-0 py-6 md:py-0 pl-7 md:pl-0  opacity-0 md:opacity-100 transition-all ease-in duration-500 text-yellow-800 font-semibold">
+        <ul
+          class="md:flex md:items-center text-xl md:static absolute w-full md:w-auto left-0 py-6 md:py-0 pl-7 md:pl-0 opacity-0 md:opacity-100 transition-all ease-in duration-500 text-yellow-800 font-semibold"
+        >
           <li class="mx-4 my-6 md:my-0">
-            <a href="#">Home</a>
+            <a href="{% url 'home' %}">Home</a>
           </li>
           <li class="mx-4 my-6 md:my-0">
-            <a href="#">About</a>
+            <a href="{% url 'about' %}">About</a>
           </li>
           <li class="mx-4 my-6 md:my-0">
-            <a href="#">Show Items</a>
-          </li>
-          <li class="mx-4 my-6 md:my-0">
-            <a href="#">Menu</a>
+            <a href="{% url 'items' %}">Menu Items</a>
           </li>
         </ul>
       </div>
     </nav>
-    
 
     {% block content %} {% endblock %}
+
+    <footer
+      class="text-2xl font-bold text-center bg-yellow-400 p-5 text-yellow-800"
+    >
+      All &copy; Copyright reserved by Conic Pizza Hut
+    </footer>
     <script>
-      function Menu(e){
-      let list = document.querySelector('ul');
-      e.name === 'menu' ? (e.name = "close",list.classList.add('top-[80px]') , list.classList.add('opacity-100')) :( e.name = "menu" ,list.classList.remove('top-[80px]'),list.classList.remove('opacity-100'))
-    }
+      function Menu(e) {
+        let list = document.querySelector("ul");
+        e.name === "menu"
+          ? ((e.name = "close"),
+            list.classList.add("top-[80px]"),
+            list.classList.add("opacity-100"))
+          : ((e.name = "menu"),
+            list.classList.remove("top-[80px]"),
+            list.classList.remove("opacity-100"));
+      }
     </script>
   </body>
 </html>

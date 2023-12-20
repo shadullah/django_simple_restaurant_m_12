@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<h1 class="text-5xl mx-auto text-yellow-700 p-2 text-center font-semibold border-b-2 border-yellow-400 my-12 w-1/4">Our Items</h1>
+
+
+<div class="grid grid-cols-4 gap-4 my-12">
+    {% for i in data.categories %}
+    <div class="bg-yellow-700 rounded-lg mx-5">
+        <a href="#">
+        <img class="rounded-t-lg" src="{{i.strCategoryThumb}}" alt="" />
+        </a>
+        <div class="p-5">
+            <a href="#">
+
+            <h5 class="mb-2 text-center text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{i.strCategory}}</h5>
+            </a>
+            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{{i.strCategoryDescription|slice:":200"}}</p>
+        </div>
+    </div>
+{% endfor %}
+
+</div>
+
+
+
+
+{% endblock %}
